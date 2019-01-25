@@ -1,12 +1,14 @@
-var express = require('express')
-require("babel-core").transform("code", options);
+'use strict'
+import express from 'express'
 
 var app = express()
 
 
 
 //Define request response in root URL (/)
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
+  var {a, b, c} = {a: 1, b: 2, c: 3};
+  console.log(a);
   res.send('Hello World!')
 })
 
