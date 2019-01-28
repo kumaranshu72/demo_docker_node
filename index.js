@@ -52,12 +52,14 @@ app.use('/', router)
  * @consumes application/json application/xml
  * @returns  200 - A hello world string
  */
-router.get('/', function(req, res){
+app.route('/').get( function(req, res){
    console.log('hi');
    res.send('hello world!');
-});
+})
 
-//Launch listening server on port 8081
+// Launch listening server on port 8081
 app.listen(3000, function () {
   console.log('app listening on port 3000!')
 })
+
+module.exports = app;
