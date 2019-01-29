@@ -7,7 +7,9 @@
     "test": "mocha --compilers js:babel-core/register",
     "test-with-coverage": "nyc --reporter=html --reporter=text mocha --require babel-core/register",
     "start": "nodemon --exec babel-node index.js",
-    "lint": "./node_modules/eslint/bin/eslint.js index.js"
+    "lint": "./node_modules/eslint/bin/eslint.js index.js",
+    "build": "babel lib -d dist",
+    "serve": "node dist/index.js"
   },
   "author": "",
   "license": "ISC",
